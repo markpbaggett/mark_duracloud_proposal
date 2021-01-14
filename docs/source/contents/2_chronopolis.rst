@@ -33,7 +33,7 @@ maximum snapshot size.  I propose 500 GB.
 4. Where possible, snapshot based on collection.  For instance, :code:`tdh` is approximately :code:`98.4 GB`. This is
 well under my proposed limit, but semantically it makes sense to store tdh alone in a snapshot like :code:`tdh_1_2021`.
 
-5. When collections are larger than 150 GB, we split the snapshots into chunks with parts and years like:
+5. When collections are larger than 500 GB, we split the snapshots into chunks with parts and years like:
 :code:`wwiioh_1_2021`, :code:`wwiioh_2_2021`, etc. See naming conventions for more details.
 
 6. If we ingest a new "batch" of a previous existing collection, we snapshot that new batch separately. We could use the
