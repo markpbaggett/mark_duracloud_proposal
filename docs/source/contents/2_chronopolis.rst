@@ -28,21 +28,22 @@ use cases for more details.
 3. It costs us the same amount to ingest content as it does to retrieve. Furthermore, retrieval is done based on the
 snapshot, not the file.  Because of this, to restore one 200 MB file we'd have to restore 2 TB of data if we had a 2 TB
 snapshot. This could be costly both in terms of money but specifically retrieval time. To be proactive, we should set a
-maximum snapshot size.  I propose 150 GB.
+maximum snapshot size.  I propose 500 GB.
 
 4. Where possible, snapshot based on collection.  For instance, :code:`tdh` is approximately :code:`98.4 GB`. This is
 well under my proposed limit, but semantically it makes sense to store tdh alone in a snapshot like :code:`tdh_1_2021`.
 
 5. When collections are larger than 150 GB, we split the snapshots into chunks with parts and years like:
-:code:`wwiioh_1_2021`, :code:`wwiioh_2_2021`, etc.
+:code:`wwiioh_1_2021`, :code:`wwiioh_2_2021`, etc. See naming conventions for more details.
 
 6. If we ingest a new "batch" of a previous existing collection, we snapshot that new batch separately. We could use the
-same naming convention or something like :code:`wwiioh_new_2021_01_13`.  We really just need a snapshot namescheme.
+same naming convention or something like :code:`wwiioh_new_2021_01_13`.  We really just need a snapshot namescheme. See
+naming conventions for more details.
 
-7. In the rare case that we have a file larger than :code:`150GB`, we snapshot the file (or file(s) if we're thinking in
+7. In the rare case that we have a file larger than :code:`500GB`, we snapshot the file (or file(s) if we're thinking in
 object) by itself.
-
 
 
 Use Cases
 ---------
+
